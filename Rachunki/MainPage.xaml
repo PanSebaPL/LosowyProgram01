@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rachunki.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+            <HorizontalStackLayout>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Rachunek" 
+                    FontSize="24"
+                    WidthRequest="200"
+                    />
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="EntryCost"
+                    WidthRequest="200"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="napiwek"
+                    FontSize="24"
+                    WidthRequest="200"
+                    
+                    />
+                <Label
+                    Text="0.00"
+                    FontSize="24"
+                    WidthRequest="150"
+                    x:Name="LblNapiwek"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="suma"
+                    FontSize="24"
+                    WidthRequest="200"
+        
+                    />
+                <Label
+                    Text="0.00"
+                    FontSize="24"
+                    WidthRequest="150"
+                    x:Name="LblSuma"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="Napiwek%"
+                    FontSize="24"
+                    WidthRequest="200"
+        
+                    />
+                <Label
+                    Text="0.00"
+                    FontSize="24"
+                    WidthRequest="150"
+                    x:Name="LblNapiwekPerc"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20">
+                <Button
+                    Text="10%"
+                    Clicked="btn10napwiek"
+                    WidthRequest="150"
+                    />
+                <Button
+                    Text="7%"
+                    Clicked="btn7napwiek"
+                    WidthRequest="150"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20">
+                <Button
+                    Text="Zak. w dol"
+                    Clicked="btnzakdol"
+                    WidthRequest="150"
+                    />
+                <Button
+                    Text="Zak. w gor"
+                    Clicked="btnzakgor"
+                    WidthRequest="150"
+                    />
+            </HorizontalStackLayout>
+            <Slider
+                Minimum="0"
+                Maximum="100"
+                x:Name="SldAmount"
+                DragCompleted="SldCalc"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
